@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            src: url('qrc:///fonts/Roboto.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            background-color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 0.5s ease-in-out;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            /* Added to center the content within the page */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+            /* Added to prevent the top of the logo from being cut off */
+            padding-top: 10px; 
+        }
+
+        .welcome-message {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .search-bar-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .search-bar:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
+        }
+
+        .chat-container {
+            width: 80%;
+            max-width: 800px;
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .chat-message {
+            padding: 8px 12px;
+            border-radius: 15px;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            background-color: #007bff;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 0;
+        }
+
+        .ai-message {
+            background-color: #f1f1f1;
+            color: #333;
+            align-self: flex-start;
+            border-bottom-left-radius: 0;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="praterich_icon.png" alt="Praterich Logo" class="logo">
+        <div class="welcome-message">Hello! How can I help you today?</div>
+        <div class="description">Ask me anything, or give me a command like "navigate to example.com" or "search for cool Python projects".</div>
+        <div class="search-bar-container">
+            <input type="text" class="search-bar" id="commandInput" placeholder="Enter your command...">
+                </div>
+        <a href="https://stenoip.github.io">Visit Stenoip Wonder Computer Website</a>
+        <div class="chat-container" id="chatContainer">
+            </div>
+        </div>
+        <p class="disclaimer-text">Ringzauber can make mistakes. Consider checking important information.</p>
+    </div>
+
+    <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const commandInput = document.getElementById('commandInput');
+            const chatContainer = document.getElementById('chatContainer');
+            const body = document.body;
+      let pythonHandler;
+
+            const imageUrls = [
+                "Screenshot_2024-06-24-18-38-08.png",
+                "IMG_20250801_143450406_HDR_AE.jpg",
+                "",
+                "",
+                "",
+            ];
+
+            function setBackground() {
+                const randomIndex = Math.floor(Math.random() * imageUrls.length);
+                const randomImage = imageUrls[randomIndex];
+                const img = new Image();
+                img.onload = () => {
+                    body.style.backgroundImage = `url('${randomImage}')`;
+                };
+                img.onerror = () => {
+                    // Fallback in case of image load failure
+                    body.style.backgroundColor = "#d3d3d3"; 
+                    body.style.backgroundImage = "none";
+                };
+                img.src = randomImage;
+            }
+            
+            // Set a random background when the page loads
+            setBackground();
+
+            commandInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    const userQuery = commandInput.value.trim();
+                    if (userQuery) {
+                        displayUserMessage(userQuery);
+                        commandInput.value = '';
+                        if (pythonHandler) {
+                            pythonHandler.processNewTabQuery(userQuery);
+                        } else {
+                            displayAIMessage('Error: Python handler is not available.');
+                        }
+                    }
+                }
+            });
+
+      new QWebChannel(qt.webChannelTransport, (channel) => {
+          pythonHandler = channel.objects.pythonHandler;
+      });
+
+            function displayUserMessage(message) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'chat-message user-message';
+                messageDiv.textContent = message;
+                chatContainer.appendChild(messageDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+
+            function displayAIMessage(message) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'chat-message ai-message';
+                messageDiv.textContent = message;
+                chatContainer.appendChild(messageDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+
+            window.displayPraterichResponse = (response) => {
+                displayAIMessage(response.praterich_response);
+            };
+      });
+      
+      // ==== Add event listeners for form submission ====
+      promptForm.addEventListener("submit", handleFormSubmit);
+    </script>
+</body>
+</html>
