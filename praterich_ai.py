@@ -29,20 +29,11 @@ def get_praterich_response(user_query):
         - "EDIT_PAGE": Use this when the user asks to change the content of the current webpage or execute JavaScript. The "query" should be a valid JavaScript command.
         - "NEW_WINDOW": Use this to open a new browser window. The "query" can be an empty string.
         - "EDIT_CODE": Use this when the user asks to edit one of the Python files. The "query" should be a JSON string containing "filename", "old_text", and "new_text" keys.
-        - "SET_FONT": Use this when the user asks to change the browser's font. The "query" should be the QSS font style (e.g., "font-family: 'Arial'; font-size: 14pt;").
-        - "UPLOAD_FILE": Use this when the user wants to upload a file. The "query" will be the file path.
-        - "TOGGLE_SIDEBAR": Use this when the user wants to show or hide the sidebar. The "query" can be an empty string.
-        - "PROCESS_TEXT": Use this when the user highlights text and asks Praterich a question. The "query" should contain the highlighted text and the user's question.
-        - "MANAGE_EXTENSIONS": Use this when the user asks to manage extensions.
-        - "SYNC_DATA": Use this when the user wants to synchronize their data.
-        - "TRANSLATE_PAGE": Use this when the user wants to translate a page.
-        - "CHANGE_SETTINGS": Use this when the user wants to change settings.
-        - "DEVELOPER_TOOLS": Use this when the user wants to inspect a page or open the developer tools.
-        - "ZOOM_IN": Use this when the user wants to zoom in. The "query" can be an empty string.
-        - "ZOOM_OUT": Use this when the user wants to zoom out. The "query" can be an empty string.
-        - "FIND_ON_PAGE": Use this when the user wants to search for text on the page. The "query" should be the text to search for.
-        - "PRINT_TO_PDF": Use this when the user wants to print the page to a PDF. The "query" can be an empty string.
-        - "BOOKMARK_PAGE": Use this when the user wants to bookmark the current page. The "query" can be an empty string.
+        
+        ...
+        
+        
+        bookmark the current page. The "query" can be an empty string.
         - "SWITCH_TAB": Use this when the user wants to switch between tabs. The "query" can be the tab number or title.
         - "RESIZE_WINDOW": Use this when the user wants to resize the window. The "query" should be the new dimensions (e.g., "800x600").
         - "NEW_CHAT": Use this when the user wants to start a new conversation. The "query" can be an empty string.
@@ -68,10 +59,7 @@ def get_praterich_response(user_query):
     
     try:
         response = client.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=user_query,
-            config=types.GenerateContentConfig(
-                system_instruction=system_instruction
+          ...
             )
         )
     
@@ -106,4 +94,5 @@ if __name__ == "__main__":
         user_query = sys.argv[1]
         get_praterich_response(user_query)
     else:
+
         print(json.dumps({"command": "NONE", "query": "", "message": "No query provided."}))
