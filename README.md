@@ -2,7 +2,7 @@
 
 **Ringzauber** is an AI-powered browser designed to enhance privacy and usability. Built with PyQt5(along with Flask and QSS), it ensures your browsing history is not saved, offering a simple and secure browsing experience. Ringzauber comes the merging of words: Ring and zauber(zauber is a Deutsch word for magic, "z" is pronouced like an "s").
 
-Ringzauber is available for Windows 7, 8.1, 10, and 11.
+Ringzauber is available for Windows 7, 8.1, 10 and 11(Please do not try on Windows Vista or 8)
 
 ![Ringzauber Logo](https://stenoip.github.io/ringzauber.png)
 
