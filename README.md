@@ -4,7 +4,7 @@
 
 Ringzauber is available for Windows 7, 8.1, 10 and 11(Please do not try on Windows Vista or 8)
 
-![Ringzauber Logo](https://stenoip.github.io/ringzauber.ico)
+![Ringzauber Logo](ringzauber.ico)
 
 ## AI-Controlled Experience
 
@@ -52,7 +52,7 @@ We welcome contributions to the Ringzauber project. If you'd like to help improv
 - [Blog](https://stenoip.github.io/blog/version1.5-is-here.html)
 
 
-![Ringzauber Screenshot](https://stenoip.github.io/ringzauber.ico)
+![Ringzauber Screenshot](Screenshot 2026-01-09 081717.png)
 
 
 ## License
