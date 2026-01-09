@@ -23,7 +23,15 @@ Ringzauber 1.6 introduces **AI Capture**, Oodles Intregation, abilty to use came
       You do not need SearXNG anymore but you may use it if you like.
         
 
-        AI api has been switched from Gemini 2.5 Flash to Groq.
+## What are introduced in Ringzauber 1.5
+
+Ringzauber 1.5 introduced Praterich Plus, an AI that helps with tasks like web browsing, searches and managing settings. It also brings several performance improvements for smoother operation.
+
+
+## Should I use Ringzauber 1.3/1.4 today?
+
+No. The browsing is boring. Praterich Plus is not available which means no agentic browsing. It looks like a 
+generic browser. Even worse, it uses PyQt5. Some websites will be rendered like Internet Explorer due to PyQt5.
 
 ## Download
 
