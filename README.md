@@ -57,4 +57,4 @@ We welcome contributions to the Ringzauber project. If you'd like to help improv
 
 ## License
 
-© 2025 **Stenoip Company**. All rights reserved.
+© 2026 **Stenoip Company**. All rights reserved.
