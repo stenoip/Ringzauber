@@ -3,209 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Tab</title>
+    <title>Stenoip New Tab</title>
     <style>
-        @font-face {
-            font-family: 'Roboto';
-            src: url('qrc:///fonts/Roboto.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-color: #ffffff;
         }
-        
+
         body {
-            background-color: #ffffff;
-            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #0808da 0%, #4897e6 100%);
+            color: var(--text-color);
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            color: #333;
+            overflow: hidden;
+            transition: background 0.5s ease;
+        }
+
+        #bg-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            z-index: -1;
+            opacity: 0.6;
             transition: background-image 0.5s ease-in-out;
         }
 
         .container {
-            width: 80%;
+            width: 90%;
             max-width: 800px;
             text-align: center;
-            /* Added to center the content within the page */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .logo {
-            width: 150px;
-            margin-bottom: 20px;
-            /* Added to prevent the top of the logo from being cut off */
-            padding-top: 10px; 
+            z-index: 1;
         }
 
-        .welcome-message {
-            font-size: 24px;
-            font-weight: bold;
+        .clock {
+            font-size: 5rem;
+            font-weight: 200;
             margin-bottom: 10px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            letter-spacing: 2px;
         }
 
-        .description {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 30px;
+        .date {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .search-bar-container {
-            position: relative;
-            width: 100%;
-        }
-
-        .search-bar {
-            width: 100%;
-            padding: 12px 20px;
-            font-size: 16px;
-            border: 2px solid #ddd;
-            border-radius: 25px;
-            outline: none;
-            transition: all 0.3s;
-        }
-
-        .search-bar:focus {
-            border-color: #007bff;
-            box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
-        }
-
-        .chat-container {
-            width: 80%;
-            max-width: 800px;
-            height: 400px;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 10px;
-            margin-top: 20px;
+        .input-wrapper {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .chat-message {
-            padding: 8px 12px;
-            border-radius: 15px;
-            max-width: 70%;
-            word-wrap: break-word;
+            gap: 20px;
         }
 
-        .user-message {
-            background-color: #007bff;
-            color: white;
-            align-self: flex-end;
-            border-bottom-right-radius: 0;
+        input[type="text"] {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 12px;
+            border: none;
+            font-size: 1.1rem;
+            outline: none;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
         }
 
-        .ai-message {
-            background-color: #f1f1f1;
+        .search-input {
+            background: rgba(255, 255, 255, 0.9);
             color: #333;
-            align-self: flex-start;
-            border-bottom-left-radius: 0;
-      }
+        }
+
+        .praterich-input {
+            background: linear-gradient(90deg, #2b0c4b 0%, #1a1a2e 100%);
+            border: 1px solid #a64bf4;
+            color: white;
+            text-align: center;
+        }
+
+        .bookmarks {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .bookmark-item {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 10px 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: white;
+            backdrop-filter: blur(5px);
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .icon-btn {
+            background: rgba(0,0,0,0.5);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background 0.2s;
+        }
+
+        #bg-upload { display: none; }
     </style>
 </head>
 <body>
+
+    <div id="bg-layer"></div>
+
     <div class="container">
-        <img src="praterich_icon.png" alt="Praterich Logo" class="logo">
-        <div class="welcome-message">Hello! How can I help you today?</div>
-        <div class="description">Ask me anything, or give me a command like "navigate to example.com" or "search for cool Python projects".</div>
-        <div class="search-bar-container">
-            <input type="text" class="search-bar" id="commandInput" placeholder="Enter your command...">
-                </div>
-        <a href="https://stenoip.github.io">Visit Stenoip Wonder Computer Website</a>
-        <div class="chat-container" id="chatContainer">
-            </div>
+        <div class="clock" id="clock">00:00</div>
+        <div class="date" id="date">Loading Date...</div>
+
+        <div class="input-wrapper">
+            <form action="https://stenoip.github.io/oodles/search" method="get">
+                <input type="text" name="q" class="search-input" placeholder="Search the web..." autocomplete="off">
+            </form>
+
+            <input type="text" id="praterich-input" class="praterich-input" placeholder=" Ask Praterich (Send to Sidebar)...">
         </div>
-        <p class="disclaimer-text">Ringzauber can make mistakes. Consider checking important information.</p>
+
+        <ul class="bookmarks" id="bookmarks-list"></ul>
     </div>
 
-    <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+    <div class="footer">
+        <button class="icon-btn" onclick="document.getElementById('bg-upload').click()" title="Change Background">🖼️</button>
+        <input type="file" id="bg-upload" accept="image/*">
+        <button class="icon-btn" onclick="resetBackground()" title="Reset Background">↺</button>
+    </div>
+
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const commandInput = document.getElementById('commandInput');
-            const chatContainer = document.getElementById('chatContainer');
-            const body = document.body;
-      let pythonHandler;
+        /* OMITTED: QWebChannel and Qt transport logic.
+           REASON: This block contains proprietary communication protocols for the Stenoip browser engine.
+        */
+        console.info("Stenoip Engine: Core communication protocols are hidden for security purposes.");
+    </script>
 
-            const imageUrls = [
-                "Screenshot_2024-06-24-18-38-08.png",
-                "IMG_20250801_143450406_HDR_AE.jpg",
-                "",
-                "",
-                "",
-            ];
+    <script>
+        // --- UI Logic Only ---
+        
+        window.onload = function() {
+            /* OMITTED: Python/Qt Backend Bridge initialization.
+               REASON: Proprietary backend integration logic removed.
+            */
+            loadBackground();
+            loadBookmarks();
+        };
 
-            function setBackground() {
-                const randomIndex = Math.floor(Math.random() * imageUrls.length);
-                const randomImage = imageUrls[randomIndex];
-                const img = new Image();
-                img.onload = () => {
-                    body.style.backgroundImage = `url('${randomImage}')`;
-                };
-                img.onerror = () => {
-                    // Fallback in case of image load failure
-                    body.style.backgroundColor = "#d3d3d3"; 
-                    body.style.backgroundImage = "none";
-                };
-                img.src = randomImage;
-            }
-            
-            // Set a random background when the page loads
-            setBackground();
-
-            commandInput.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter') {
-                    const userQuery = commandInput.value.trim();
-                    if (userQuery) {
-                        displayUserMessage(userQuery);
-                        commandInput.value = '';
-                        if (pythonHandler) {
-                            pythonHandler.processNewTabQuery(userQuery);
-                        } else {
-                            displayAIMessage('Error: Python handler is not available.');
-                        }
-                    }
-                }
+        // UI Handlers
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('clock').innerText = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            document.getElementById('date').innerText = now.toLocaleDateString('en-GB', {
+                weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
             });
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
 
-      new QWebChannel(qt.webChannelTransport, (channel) => {
-          pythonHandler = channel.objects.pythonHandler;
-      });
+        // Background Logic
+        const bgLayer = document.getElementById('bg-layer');
+        const bgUpload = document.getElementById('bg-upload');
+        const STORAGE_KEY = 'stenoip_bg_pref';
 
-            function displayUserMessage(message) {
-                const messageDiv = document.createElement('div');
-                messageDiv.className = 'chat-message user-message';
-                messageDiv.textContent = message;
-                chatContainer.appendChild(messageDiv);
-                chatContainer.scrollTop = chatContainer.scrollHeight;
+        function loadBackground() {
+            const storedBg = localStorage.getItem(STORAGE_KEY);
+            if (storedBg) {
+                bgLayer.style.backgroundImage = `url(${storedBg})`;
+                bgLayer.style.backgroundColor = "rgba(0,0,0,0.4)"; 
+                bgLayer.style.backgroundBlendMode = "darken";
             }
+        }
 
-            function displayAIMessage(message) {
-                const messageDiv = document.createElement('div');
-                messageDiv.className = 'chat-message ai-message';
-                messageDiv.textContent = message;
-                chatContainer.appendChild(messageDiv);
-                chatContainer.scrollTop = chatContainer.scrollHeight;
+        bgUpload.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file && file.size <= 2 * 1024 * 1024) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    localStorage.setItem(STORAGE_KEY, e.target.result);
+                    bgLayer.style.backgroundImage = `url(${e.target.result})`;
+                };
+                reader.readAsDataURL(file);
             }
+        });
 
-            window.displayPraterichResponse = (response) => {
-                displayAIMessage(response.praterich_response);
-            };
-      });
-      
-      // ==== Add event listeners for form submission ====
-      promptForm.addEventListener("submit", handleFormSubmit);
+        function resetBackground() {
+            localStorage.removeItem(STORAGE_KEY);
+            bgLayer.style.backgroundImage = 'none';
+        }
+
+        // Bookmark Logic
+        function loadBookmarks() {
+            const list = document.getElementById('bookmarks-list');
+            const defaultBookmarks = [
+                { name: "YouTube", url: "https://youtube.com" },
+                { name: "GitHub", url: "https://github.com" },
+                { name: "Reddit", url: "https://reddit.com" }
+            ];
+            list.innerHTML = defaultBookmarks.map(bm => `
+                <li>
+                    <a href="${bm.url}" class="bookmark-item">
+                        <img src="https://www.google.com/s2/favicons?q=${bm.url}" class="bookmark-icon">
+                        ${bm.name}
+                    </a>
+                </li>
+            `).join('');
+        }
     </script>
 </body>
 </html>
