@@ -52,7 +52,7 @@ We welcome contributions to the Ringzauber project. If you'd like to help improv
 - [Blog](https://stenoip.github.io/blog/version1.5-is-here.html)
 
 
-![Ringzauber Screenshot](Screenshot 2026-01-09 081717.png)
+![Ringzauber Screenshot](screenshot_ringzauber.png)
 
 
 ## License
