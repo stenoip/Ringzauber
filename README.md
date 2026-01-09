@@ -51,6 +51,10 @@ We welcome contributions to the Ringzauber project. If you'd like to help improv
 - [Privacy Policy](https://stenoip.github.io/privacy.html)
 - [Blog](https://stenoip.github.io/blog/version1.5-is-here.html)
 
+
+![Ringzauber Screenshot](https://stenoip.github.io/ringzauber.ico)
+
+
 ## License
 
 © 2025 **Stenoip Company**. All rights reserved.
