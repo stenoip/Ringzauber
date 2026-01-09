@@ -17,9 +17,13 @@ At its core, Ringzauber is powered by **Praterich**, an AI assistant that can ha
 - **AI assistance**: Powered by **Praterich** for task automation
 - **Customizable**: Adjust the theme and browser interface
 
-## What's New in Ringzauber 1.5
+## What's New in Ringzauber 1.6
 
-Ringzauber 1.5 introduces **Praterich Plus**, an AI that helps with tasks like web browsing, searches and managing settings. It also brings several performance improvements for smoother operation.
+Ringzauber 1.6 introduces **AI Capture**, Oodles Intregation, abilty to use camera and microphone for websites. You can know choose you favourable search engine. 
+      You do not need SearXNG anymore but you may use it if you like.
+        
+
+        AI api has been switched from Gemini 2.5 Flash to Groq.
 
 ## Download
 
@@ -32,9 +36,9 @@ Get the latest version of Ringzauber from the following links:
 
 **Note**: Ringzauber is still in its beta phase, and certain features may not be fully functional.
 
-## Ringzauber 6 Coming Soon
+## Ringzauber 1.6 
 
-**Ringzauber 6** is set to launch for **Christmas 2025**. Stay tuned for new features, enhanced AI capabilities and major improvements to your browsing experience.
+**Ringzauber 1.6** is out now! Praterich bugs have been fixed. Support for Camera, Microphone and Notifications have been added.
 
 ## Contributions
 
