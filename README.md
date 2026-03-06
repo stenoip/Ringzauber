@@ -20,7 +20,7 @@ Ringzauber 1.6 introduces **AI Capture**. It allows Praterich to answer question
 Oodles Intregation, abilty to use camera and microphone for websites has also been added. You can know choose your favourite search engine. 
       You do not need SearXNG anymore but you may use it if you like.
 
-      ![Ringzauber Screenshot](screenshot_ringzauber.png)
+![Ringzauber Screenshot](screenshot_ringzauber.png)
         
 
 ## What was introduced in Ringzauber 1.5
