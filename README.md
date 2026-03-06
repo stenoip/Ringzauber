@@ -37,6 +37,8 @@ generic browser. Even worse, it uses PyQt5. Some websites will be rendered like 
 
 Get the latest version of Ringzauber from the following links:
 
+-[Ringzauber Browser version 1.6 Mini]
+(https://drive.google.com/file/d/1TFBC3YeI3cmPGpbXFuUZxcMYSab2T_aU/view?usp=drive_link)
 - [Ringzauber Browser version 1.5 Besser](https://drive.google.com/file/d/1euOGnabj6ULBD7E1WTZaMvv1VfLI4oPy/view)
 - [Ringzauber Browser 1.5 Beta](https://drive.google.com/drive/folders/1SfcprFhW9uFGJ2fGA56gEvMJdEdHo2Ml?usp=sharing)
 - [Ringzauber Browser Penguin (for Chromebooks)](https://drive.google.com/file/d/1q-xV-EpmSCoKv8HiSSRfNn60GYGyJJBG/view?usp=sharing)
