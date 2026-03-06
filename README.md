@@ -1,29 +1,29 @@
 # Ringzauber Browser
 
-**Ringzauber** is an AI-powered browser designed to enhance privacy and usability. Built with PyQt5(along with Flask and QSS), it ensures your browsing history is not saved, offering a simple and secure browsing experience. Ringzauber comes the merging of words: Ring and zauber(zauber is a Deutsch word for magic, "z" is pronouced like an "s").
+**Ringzauber** is the world's first AGENTIC browser designed to bring the future today.
 
-Ringzauber is available for Windows 7, 8.1, 10 and 11(Please do not try on Windows Vista or 8)
+Built with PyQt6(along with Flask and QSS), the A.I can navigate, search, analyse your current website, compare sources, answer questions on your screen and **more**.
+
+It also ensures your browsing history is not saved, offering a simple and secure browsing experience. Ringzauber comes the merging of words: Ring and zauber(zauber is a Deutsch word for magic, "z" is pronouced like an "s").
+
+Ringzauber is available for Windows 7, 8.1, 10 and 11 (Please do not try on Windows Vista or 8).
+
+Not available on Windows XP.
 
 ![Ringzauber Logo](ringzauber.ico)
 
-## AI-Controlled Experience
 
-At its core, Ringzauber is powered by **Praterich**, an AI assistant that can handle web navigation, search, settings adjustments and more. This intelligent assistant can help you interact with the browser in a natural, conversational way.
-
-## Features
-
-- **Private browsing**: No history saved
-- **Cross-platform**: Windows 7, 8.1, 10 and 11(Great for if you computer still has Internet Explorer)
-- **AI assistance**: Powered by **Praterich** for task automation
-- **Customizable**: Adjust the theme and browser interface
 
 ## What's New in Ringzauber 1.6
 
-Ringzauber 1.6 introduces **AI Capture**, Oodles Intregation, abilty to use camera and microphone for websites. You can know choose you favourable search engine. 
+Ringzauber 1.6 introduces **AI Capture**. It allows Praterich to answer questions on your webpage or help you file documents in REAL-TIME.
+Oodles Intregation, abilty to use camera and microphone for websites has also been added. You can know choose your favourite search engine. 
       You do not need SearXNG anymore but you may use it if you like.
+
+      ![Ringzauber Screenshot](screenshot_ringzauber.png)
         
 
-## What are introduced in Ringzauber 1.5
+## What was introduced in Ringzauber 1.5
 
 Ringzauber 1.5 introduced Praterich Plus, an AI that helps with tasks like web browsing, searches and managing settings. It also brings several performance improvements for smoother operation.
 
@@ -37,6 +37,8 @@ generic browser. Even worse, it uses PyQt5. Some websites will be rendered like 
 
 Get the latest version of Ringzauber from the following links:
 
+*Note, the current Ringzauber 1.6 Mini has some errors and dumbed down features of Praterich, you may wait for 15th March 2026 to get the all new Ringzauber 1.6 Pro*
+
 - .
 - [Ringzauber Browser version 1.6 Mini]
 (https://drive.google.com/file/d/1TFBC3YeI3cmPGpbXFuUZxcMYSab2T_aU/view?usp=drive_link)
@@ -45,11 +47,9 @@ Get the latest version of Ringzauber from the following links:
 - [Ringzauber Browser Penguin (for Chromebooks)](https://drive.google.com/file/d/1q-xV-EpmSCoKv8HiSSRfNn60GYGyJJBG/view?usp=sharing)
 - [Ringzauber Browser version 1.4](https://drive.google.com/file/d/1kGswsvTJjdyueLFhQ4EkSCLPKy1i3rha/view?usp=sharing)
 
-**Note**: Ringzauber is still in its beta phase, and certain features may not be fully functional.
+**Note**: Ringzauber 1.5 to 1.3 were in  beta phases, and certain features may not be fully functional.
 
-## Ringzauber 1.6 
 
-**Ringzauber 1.6** is out now! Praterich bugs have been fixed. Support for Camera, Microphone and Notifications have been added.
 
 ## Contributions
 
@@ -63,7 +63,7 @@ We welcome contributions to the Ringzauber project. If you'd like to help improv
 - [Blog](https://stenoip.github.io/blog/version1.5-is-here.html)
 
 
-![Ringzauber Screenshot](screenshot_ringzauber.png)
+
 
 
 ## License
