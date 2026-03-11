@@ -8,7 +8,7 @@ It is FREE! Compare to OpenA.I's Atlas.
 
 It also ensures your browsing history is not saved, offering a simple and secure browsing experience. Ringzauber comes the merging of words: Ring and zauber(zauber is a Deutsch word for magic, "z" is pronouced like an "s").
 
-Ringzauber is available for Windows 7, 8.1, 10 and 11 (Please do not try on Windows Vista or 8).
+Ringzauber is available for Windows 7, 8.1, 10 and 11 (Please do not try on Windows Vista or 8). Ringzauber is no longer experimental.
 
 Not available on Windows XP.
 
