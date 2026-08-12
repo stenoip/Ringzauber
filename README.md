@@ -1,10 +1,13 @@
 # Ringzauber Browser
 
-**Ringzauber** is the world's first AGENTIC browser designed to bring the future today.
+**Ringzauber** is the world's favourite homemade browser designed to bring the future today.
 
-Built with PyQt6(along with Flask and QSS), the A.I can navigate, search, analyse your current website, compare sources, answer questions on your screen and **more**.
+*Temporary NOTICE: Ringzauber is built with PyQt6. Due to this, PyQt6 makes building a browser app clunky. Therefore, by the 
+end of 2026, Ringzauber Python will lose support and critical updates. An all new browser made from JavaScript will be released in the 
+fall of 2026, learn more on the  !(Ringzauber Website)[https://stenoip.github.io/ringzauber-site]*
+---
 
-It is FREE! Compare to OpenA.I's Atlas.
+Built with PyQt6, the browser doesn't store your history and integrated with !(Oodles Metasearch)[https://github.com/stenoip/oodles]                                                                                                         
 
 It also ensures your browsing history is not saved, offering a simple and secure browsing experience. Ringzauber comes the merging of words: Ring and zauber(zauber is a Deutsch word for magic, "z" is pronouced like an "s").
 
@@ -14,41 +17,33 @@ Not available on Windows XP.
 
 ![Ringzauber Logo](ringzauber.ico)
 
-
-
-## What's New in Ringzauber 1.6
+## What's New in Ringzauber 1.7
 
 Ringzauber 1.6 introduces **AI Capture**. It allows Praterich to answer questions on your webpage or help you file documents in REAL-TIME.
 Oodles Intregation, abilty to use camera and microphone for websites has also been added. You can know choose your favourite search engine. 
       You do not need SearXNG anymore but you may use it if you like.
 
+<img width="1043" height="663" alt="image" src="https://github.com/user-attachments/assets/3eca88fc-cb51-4ecc-94f7-f801fdd4e8c2" />
+
+
+
+## What was introduced in Ringzauber 1.6
+
+Ringzauber 1.6 introduced **AI Capture**. It allowed Praterich to answer questions on your webpage or help you file documents in REAL-TIME.
+Oodles Intregation, abilty to use camera and microphone for websites had also been added. You can know choose your favourite search engine. 
+      You do not need SearXNG anymore but you may use it if you like.
+
 ![Ringzauber Screenshot](screenshot_ringzauber.png)
         
 
-## What was introduced in Ringzauber 1.5
-
-Ringzauber 1.5 introduced Praterich Plus, an AI that helps with tasks like web browsing, searches and managing settings. It also brings several performance improvements for smoother operation.
-
-
-## Should I use Ringzauber 1.3/1.4 today?
-
-No. The browsing is boring. Praterich Plus is not available which means no agentic browsing. It looks like a 
-generic browser. Even worse, it uses PyQt5. Some websites will be rendered like Internet Explorer due to PyQt5.
 
 ## Download
 
-Get the latest version of Ringzauber from the following links:
+Get the latest version of Ringzauber from the [GitHub Releases Section]([https://github.com/stenoip/Ringzauber/releases/tag/ringzauber](https://github.com/stenoip/Ringzauber/releases#release-ringzauber1.7.7)) section:
 
-*Note, the current Ringzauber 1.6 Mini has some errors and dumbed down features of Praterich, you may wait for 15th March 2026 to get the all new Ringzauber 1.6 Pro*
+*Note, the current Ringzauber versions will soon lose support for an all new browser made from Electron*
 
-- [Ringzauber Browser version 1.6 PRO](https://github.com/stenoip/Ringzauber/releases/tag/ringzauber)
-- [Ringzauber Browser version 1.6 Mini](https://drive.google.com/file/d/1TFBC3YeI3cmPGpbXFuUZxcMYSab2T_aU/view?usp=drive_link)
-- [Ringzauber Browser version 1.5 Besser](https://drive.google.com/file/d/1euOGnabj6ULBD7E1WTZaMvv1VfLI4oPy/view)
-- [Ringzauber Browser 1.5 Beta](https://drive.google.com/drive/folders/1SfcprFhW9uFGJ2fGA56gEvMJdEdHo2Ml?usp=sharing)
-- [Ringzauber Browser Penguin (for Chromebooks)](https://drive.google.com/file/d/1q-xV-EpmSCoKv8HiSSRfNn60GYGyJJBG/view?usp=sharing)
-- [Ringzauber Browser version 1.4](https://drive.google.com/file/d/1kGswsvTJjdyueLFhQ4EkSCLPKy1i3rha/view?usp=sharing)
 
-**Note**: Ringzauber 1.5 to 1.3 were in  beta phases, and certain features may not be fully functional.
 
 
 
